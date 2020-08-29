@@ -34,12 +34,12 @@ const login = (req, res) => {
       'content-type': 'application/json'
     },
     data: {
-      grant_type: 'password',
+      grant_type: 'client_credentials',
       username: username,
       password: password,
       audience: process.env.AUTH0_IDENTITY,
       connection: 'Username-Password-Authentication',
-      scope: 'openid',
+      scope: '',
       client_id: process.env.AUTH0_CLIENT_ID,
       client_secret: process.env.AUTH0_CLIENT_SECRET
     }
